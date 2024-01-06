@@ -1,0 +1,368 @@
+/*to be able to set top left right etc.. you need to set opsition
+to anything except static. By default its static so you need to\
+change it to set top left right etc..*/
+.overlay-sideimg{
+    position: absolute;
+    z-index: 5px;
+    background-image: url("sideimg.png");
+    background-size: cover;
+    top:20px;
+    height:70px;
+    width: 125px;
+    margin-left: 30px;
+}
+
+
+body{
+     /*background-image: linear-gradient(#101010,#2b2b2b);*/
+     /*the first three lines are all needed to make the perfect background image*/
+     background-image: url('back.png');
+     background-size: cover;  /*Make the gradient cover the entire body*/ 
+     height: 97vh; /*Set height to 100% of viewport height */
+     width: 95vw;
+     background-color: black;
+     user-select: none; /*eliminates the annoying blue select text*/
+     
+    
+ }
+
+.bodycontainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+ .header{
+    display: flex;
+    /*position: fixed;*/
+    /*this statement kept messing with our flexbox alignment
+    the fixed position takes the .header out of the normal 
+    document flow, and the margin of the .content doesn't push
+     it down enough to clear the fixed header.*/
+    height: 10vh;
+    width: 95vw;
+    padding: 10px 10px 20px 10px;/*top right bottom left*/
+    background-color: rgba(0, 0, 0, 0);
+   /* border-bottom: 2px solid rgba(69, 68, 68, 0.368); affects only bottom*/
+  }
+
+#projectportal{
+    display:flex;
+    justify-content: center; /*helps adjust on main axis(horizontal axis)*/
+    width: 50vw;
+
+}
+             .pp{
+                 border: none;
+                 height: 40px;
+                 width: 120px;
+                 font-size: 1.25rem;
+                 margin:12px 25px 0px 0px; 
+                }
+                
+            #portfolio{ margin-left: 200px;
+
+                }
+
+            button{
+                 transition:0.3s ease; /* 0.3s duration, ease timing function */
+                 border:solid;
+                 color: #ffffff70;
+                 border-radius: 25px;
+                 border: solid;
+                 border-color: #00000000; /*transparent*/
+                 background-color: rgba(45, 45, 45, 0);
+                 /* couldn't mention height and width here because display of button is inline is by default inline*/
+                 /*inline doesn't allow to change height width padding etc*/
+                 /*one way to solve this problem is by writing display: inline-block; or block */
+                 /*other way to do this is by mentioning the height width in a class selector we have done this below see*/
+                }
+                
+             button:hover{
+                 border-color: rgb(143, 0, 253);
+                 color:rgb(143, 0, 253);
+                 transform: translateY(10px);
+                 letter-spacing: 1.5px; /*new letter spacing */
+                }
+            
+             button:active{
+                 transition:0s ease; /* 0.3s duration, ease timing function */
+                 color:rgb(255, 255, 255);
+                }
+             .dropdown #morework{
+                 border: none;
+                 transition:0s ease;
+                 color: #ffffff70;
+                 transform: translateY(0px);
+                 letter-spacing: normal;
+             }
+
+             #morework{
+                margin-right:70px;
+             }
+             
+             #morework:hover{
+                color: #8f00fd;
+             }
+
+              /*important for dropdown*/
+                .dropdown {
+                    display: inline-block;
+                  }
+                  
+                  .dropbtn {
+                    border: none;
+                    height: 40px;
+                    width: 120px;
+                    font-size: 1.25rem;
+                    margin: 12px 25px 0px 0px;
+                  }
+                  
+                  .dropdown-content {
+                    display: none; /*this makes sure dropdown content aren't visible
+                    so that we can make them visible only on hover*/
+                    position: absolute;
+                    background-color: #2d2d2d12;
+                    backdrop-filter: blur(4px);
+                    box-shadow: 0px 8px 16px 0px #252525;
+                    z-index: 1; /* hhad to do this or it would affect
+                    our flex boxes header and container*/
+                    margin-left: 15px;
+                    border-radius: 10px;
+                    width: 125px;
+                  }
+                  
+                  .dropdown-content a{
+                    text-decoration:none ;/* had to do this because by default anchor tage have 
+                    underline which we don't want*/
+                    color: #ffffff;
+                    padding: 12px 16px;
+                    display: block;
+                
+                  }
+                  
+                  .dropdown-content a:hover{
+                    background-color: #3f3f3f3e;
+                    color: #ffffff;
+                    font-weight: bolder;
+                    border-radius: 10px;
+
+                  }
+                  
+                  .dropdown:hover .dropdown-content {
+                    display: block; /*this makes content come below MoreWork btn*/
+                    
+                  }
+                    /*not exactly important part to make drop-down,
+                    this is only an aesthetic adjustment*/
+                  .dropdown:hover #morework{
+                    color: #8f00fd;
+                  }
+
+
+.media{
+   display: flex;
+   width: 30vw;
+   height: 60px;
+} 
+
+        
+        #medias{
+            transition:0.3s ease;
+            margin:30px 15px 0px 0px;
+            color: #ffffff70;
+        }   
+                
+        #medias:hover{
+            color: #8f00fd;
+            transform: translateY(6px);
+        }
+
+        #medias:active{
+            color: #ffffff;
+        }
+                             
+
+.login-signup{
+    display: flex;
+    justify-content: flex-end;
+    width: 20vw;
+    margin:0;
+}
+
+        .log-sign{
+            color: white;
+            height: 40px;
+            width: 120px;
+            font-size: 1.25rem;
+            margin:12px 25px 0px 0px;
+        }
+        .log-sign:hover{
+             border-color:white;
+             color: white;
+
+        }
+        .log-sign:active{
+            border-color:white;
+            color: white;
+            background-color: #ffffff70;
+
+       }
+
+        #log{
+            margin-left: 35px;
+        }
+        
+        #sig{
+            margin-right:30px ;
+        }
+
+.content{
+    display: flex;
+    height: 75vh;
+    width: 95vw; 
+
+} 
+         #box1{
+            display: flex;
+            flex-direction: column;
+           /* border: 2px solid #8f00fd;*/
+            width: 25vw;
+            height: 60vh;
+            margin: 20px 20px 0px 20px;
+            font-size: 3rem;
+            padding-left: 20px;
+            z-index: 5px;
+            align-items: center;
+
+
+
+         }
+        
+         .box1Big{
+            display: flex;
+            height: fit-content;
+            color: #8f00fd;
+            /*text-shadow:
+            -1px -1px 0 #8f00fd,
+            0    -1px 0 #8f00fd,
+            1px  -1px 0 #8f00fd,
+            1px   0    0 #8f00fd,
+            1px   1px 0 #8f00fd,
+            0     1px 0 #8f00fd,
+            -1px  1px 0 #8f00fd,
+            -1px  0    0 #8f00fd;
+            */
+            /*text gradient*/
+            margin: 0;
+            padding: 30px 0px 0px 20px;
+            background: linear-gradient(to right, #ffcb7e, #6704bd);
+            -webkit-background-clip: text; /* For webkit browsers works for chrome safari modern browsers*/
+            background-clip: text;
+            color: transparent; 
+            
+            
+          }
+        
+        .box1Small{
+            display: flex;
+            height: fit-content;
+            font-size: 1.15rem;
+            color: white;
+            margin-top: 10px;
+            width: 20vw;
+            padding-top: 10px;
+            
+        }
+
+        #box1boxes{
+            display: flex;
+        }
+
+        #box1btn{
+            display: inline-block;
+            width:120px;
+            height: 50px;
+            background-color: #ffffff;
+            color: #171717;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: bolder;
+            border:none;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        #box2btn{
+            display: inline-block;
+            width:120px;
+            height: 50px;
+            background-image: linear-gradient(to right,#ffcb7e,#6704bd);
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: bolder;
+            border:none;
+            margin-top: 20px;
+        }
+
+         #box2{
+            display: flex;
+           /* border: solid 2px #8f00fd;*/
+            width: 45vw;
+            height: 70vh;
+            margin-right: 20px;
+            background-image: url(box2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+         }
+
+        #box3{
+            display: flex;
+            flex-direction: column;
+            border: solid 2px #91909042;
+            width: 20vw;
+            height: 60vh;
+            margin-top: 60px;
+            border-radius: 25px;
+            background-color: #ffffff04;
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 8px 16px 0px #414141;
+            
+        }
+
+        .box3Big{
+            display: flex;
+            height: fit-content;
+            color: #ffffff;
+            margin: 0;
+            padding: 30px 0px 0px 20px;
+            font-size: 2rem;
+        }
+
+        .box3Small{
+            display: flex;
+            height: fit-content;
+            font-size: 1.15rem;
+            color: white;
+            margin-top: 10px;
+            width: 15vw;
+            padding-top: 10px;
+            margin-left: 20px;
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
