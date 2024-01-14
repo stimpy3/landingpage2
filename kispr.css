@@ -29,7 +29,7 @@ body{
     document flow, and the margin of the .content doesn't push
      it down enough to clear the fixed header.*/
     height: 10vh;
-    width: 95vw;
+    width: 98vw;
     padding: 10px 10px 20px 0px;/*top right bottom left*/
     background-color: rgba(0, 0, 0, 0);
    /* border-bottom: 2px solid rgba(69, 68, 68, 0.368); affects only bottom*/
@@ -37,8 +37,8 @@ body{
 
 #projectportal{
     display:flex;
-    justify-content: center; /*helps adjust on main axis(horizontal axis)*/
-    width: 50vw;
+    width: 45vw;
+    margin-left: 1vw;
 
 }
              
@@ -47,9 +47,9 @@ body{
             .pp{
                 border: none;
                 height: 40px;
-                width: 120px;
+                width: 7vw;
                 font-size: 1.25rem;
-                margin:12px 25px 0px 0px; 
+                margin:12px 4vw 0px 0px; 
                  }
                  
 
@@ -87,8 +87,9 @@ body{
              }
 
              #morework{
-                margin-right:70px;
+                margin-left: 1.6vw;
                 color: #ffffff;
+                width: 7vw;
              }
              
              #morework:hover{
@@ -163,15 +164,29 @@ body{
 
 .media{
    display: flex;
-   width: 30vw;
-   height: 60px;
+   width: fit-content;
+   background-color: #171717;
+   border-radius: 25px;
+   margin-right: 20vw;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 2px 10px 5px #18181875;
+} 
+
+.media a{
+  display: flex;
+  width: fit-content;
+  margin: 10px 10px;
+  text-decoration: none;
 } 
 
         
         #medias{
             transition:0.3s ease;
-            margin:30px 15px 0px 0px;
+            
             color: #ffffff;
+            
+            
         }   
                 
         #medias:hover{
@@ -187,25 +202,24 @@ body{
     display: flex;
     justify-content: flex-end;
     width: 20vw;
-    margin:0;
 }
 
         .log-sign{
             color: #ffffff;
-            backdrop-filter: blur(5px);
-            border: solid 4px #ffffff;
-
-            height: 40px;
+            background-color: #171717;
+            border: solid 4px #171717;
+            margin-right: 15px;
+            height: 60px;
             width: 120px;
             font-size: 1.25rem;
-            margin:12px 25px 0px 0px;
+            box-shadow: 2px 10px 5px #18181875;
             
         }
 
         @keyframes trial {
-          0% {border-color: #ffffff;}
-          50% {border-color: #6704bd;}
-          100% {border-color: #ffffff}
+          0% {border-color: #ffcb7e}
+          50% {border-color: #d740fd;}
+          100% {border-color: #ffcb7e}
         }
 
         .log-sign:hover{
@@ -241,14 +255,17 @@ body{
          #box1{
             display: flex;
             flex-direction: column;
-           /* border: 2px solid #8f00fd;*/
+            
+            border-radius: 25px;
             width: 25vw;
             height: 60vh;
-            margin: 20px 50px 0px 20px;
+            margin: 20px 2vw 0px 20px;
             font-size: 3rem;
             padding-left: 20px;
             z-index: 5px;
             align-items: center;
+            padding: 20px;
+            background-color: transparent;
 
 
 
@@ -270,7 +287,7 @@ body{
             */
             /*text gradient*/
             margin: 0;
-            padding: 30px 0px 0px 20px;
+            padding: 30px 0px 0px 0px;
             background: linear-gradient(to right, #ffcb7e, #6704bd);
             -webkit-background-clip: text; /* For webkit browsers works for chrome safari modern browsers*/
             background-clip: text;
@@ -286,7 +303,7 @@ body{
             font-size: 1.15rem;
             color: white;
             margin-top: 10px;
-            width: 20vw;
+           
             padding-top: 10px;
             
         }
@@ -294,19 +311,17 @@ body{
         #box1boxes{
             display: flex;
         }
-
         #box1btn{
             display: flex;
-            width:120px;
+            width: 120px;
             height: 50px;
             background-color: #ffffff;
-            color: #171717;
+            color: #000000;
             justify-content: center;
             align-items: center;
             font-size: 1rem;
             font-weight: bolder;
             border:none;
-            margin-top: 20px;
             margin-right: 20px;
         }
         #box2btn{
@@ -320,7 +335,6 @@ body{
             font-size: 1rem;
             font-weight: bolder;
             border:none;
-            margin-top: 20px;
         }
 
          #box2{
@@ -333,7 +347,7 @@ body{
             background-size: contain;
             background-repeat: no-repeat;
             padding-bottom: 30px;
-            margin-left:120px;
+            margin-left:10vw;
             position: relative;
             animation-name: example;
             animation-duration: 2.5s;
@@ -353,10 +367,9 @@ body{
             border: solid 2px #ffffff7b;
             width: 20vw;
             height: 60vh;
-            margin-top: 60px;
+            margin-top: 20px;
             border-radius: 25px;
-            background-color: #85858552;
-            backdrop-filter: blur(10px);
+            background-color: #ffffff;
             box-shadow: 0px 8px 16px 0px #575757;
             overflow-y: scroll;
             overflow-x: hidden;
@@ -389,7 +402,7 @@ body{
         .box3Big{
             display: flex;
             height: fit-content;
-            color: #ffffff;
+            color: #000000;
             margin: 0;
             padding: 30px 0px 0px 20px;
             font-size: 1.5rem;
@@ -400,12 +413,13 @@ body{
             display: flex;
             height: fit-content;
             font-size: 1.15rem;
-            color: white;
+            color: rgb(0, 0, 0);
             margin-top: 10px;
             width: 15vw;
             padding-top: 10px;
             margin-left: 20px;
         }
+
 
 
 
