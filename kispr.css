@@ -1,17 +1,6 @@
 /*to be able to set top left right etc.. you need to set opsition
 to anything except static. By default its static so you need to\
 change it to set top left right etc..*/
-.overlay-sideimg{
-    position: absolute;
-    z-index: 5px;
-    background-image: url("sideimg.png");
-    background-size: cover;
-    top:20px;
-    height:70px;
-    width: 125px;
-    margin-left: 30px;
-}
-
 
 body{
      /*background-image: linear-gradient(#101010,#2b2b2b);*/
@@ -41,7 +30,7 @@ body{
      it down enough to clear the fixed header.*/
     height: 10vh;
     width: 95vw;
-    padding: 10px 10px 20px 10px;/*top right bottom left*/
+    padding: 10px 10px 20px 0px;/*top right bottom left*/
     background-color: rgba(0, 0, 0, 0);
    /* border-bottom: 2px solid rgba(69, 68, 68, 0.368); affects only bottom*/
   }
@@ -52,22 +41,22 @@ body{
     width: 50vw;
 
 }
-             .pp{
-                 border: none;
-                 height: 40px;
-                 width: 120px;
-                 font-size: 1.25rem;
-                 margin:12px 25px 0px 0px; 
-                }
-                
-            #portfolio{ margin-left: 200px;
+             
+            
 
-                }
+            .pp{
+                border: none;
+                height: 40px;
+                width: 120px;
+                font-size: 1.25rem;
+                margin:12px 25px 0px 0px; 
+                 }
+                 
 
             button{
                  transition:0.3s ease; /* 0.3s duration, ease timing function */
                  border:solid;
-                 color: #ffffff70;
+                 color: #ffffff;
                  border-radius: 25px;
                  border: solid;
                  border-color: #00000000; /*transparent*/
@@ -92,26 +81,34 @@ body{
              .dropdown #morework{
                  border: none;
                  transition:0s ease;
-                 color: #ffffff70;
+                 color: #ffffff;
                  transform: translateY(0px);
                  letter-spacing: normal;
              }
 
              #morework{
                 margin-right:70px;
+                color: #ffffff;
              }
              
              #morework:hover{
                 color: #8f00fd;
+                letter-spacing: 1.5px;
              }
 
               /*important for dropdown*/
                 .dropdown {
                     display: inline-block;
+                    
                   }
+
+                .dropdown:hover{
+                  transition: 0.3s ease;
+                  transform: translateY(10px);
+                }
                   
                   .dropbtn {
-                    border: none;
+                    border-color: #60606032;
                     height: 40px;
                     width: 120px;
                     font-size: 1.25rem;
@@ -130,6 +127,7 @@ body{
                     margin-left: 15px;
                     border-radius: 10px;
                     width: 125px;
+                    border: solid 1px #a1a1a182;
                   }
                   
                   .dropdown-content a{
@@ -142,21 +140,24 @@ body{
                   }
                   
                   .dropdown-content a:hover{
-                    background-color: #3f3f3f3e;
-                    color: #ffffff;
-                    font-weight: bolder;
+                    color: white;
+                    font-size: larger;
                     border-radius: 10px;
+                    border: solid 1px #a1a1a182;
 
                   }
                   
                   .dropdown:hover .dropdown-content {
                     display: block; /*this makes content come below MoreWork btn*/
+    
+                    
                     
                   }
                     /*not exactly important part to make drop-down,
                     this is only an aesthetic adjustment*/
                   .dropdown:hover #morework{
                     color: #8f00fd;
+                    letter-spacing: 1.5px;
                   }
 
 
@@ -170,12 +171,11 @@ body{
         #medias{
             transition:0.3s ease;
             margin:30px 15px 0px 0px;
-            color: #ffffff70;
+            color: #ffffff;
         }   
                 
         #medias:hover{
-            color: #8f00fd;
-            transform: translateY(6px);
+            transform: translateY(10px);
         }
 
         #medias:active{
@@ -191,21 +191,36 @@ body{
 }
 
         .log-sign{
-            color: white;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
+            border: solid 4px #ffffff;
+
             height: 40px;
             width: 120px;
             font-size: 1.25rem;
             margin:12px 25px 0px 0px;
+            
         }
+
+        @keyframes trial {
+          0% {border-color: #ffffff;}
+          50% {border-color: #6704bd;}
+          100% {border-color: #ffffff}
+        }
+
         .log-sign:hover{
-             border-color:white;
-             color: white;
+             
+             color: #ffffff;
+             animation-name: trial ;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+             
 
         }
         .log-sign:active{
             border-color:white;
-            color: white;
-            background-color: #ffffff70;
+            color: #000000;
+            background-color: #ffffff;
 
        }
 
@@ -229,7 +244,7 @@ body{
            /* border: 2px solid #8f00fd;*/
             width: 25vw;
             height: 60vh;
-            margin: 20px 20px 0px 20px;
+            margin: 20px 50px 0px 20px;
             font-size: 3rem;
             padding-left: 20px;
             z-index: 5px;
@@ -262,6 +277,7 @@ body{
             color: transparent; 
             
             
+            
           }
         
         .box1Small{
@@ -280,7 +296,7 @@ body{
         }
 
         #box1btn{
-            display: inline-block;
+            display: flex;
             width:120px;
             height: 50px;
             background-color: #ffffff;
@@ -294,7 +310,7 @@ body{
             margin-right: 20px;
         }
         #box2btn{
-            display: inline-block;
+            display: flex;
             width:120px;
             height: 50px;
             background-image: linear-gradient(to right,#ffcb7e,#6704bd);
@@ -312,26 +328,63 @@ body{
            /* border: solid 2px #8f00fd;*/
             width: 45vw;
             height: 70vh;
-            margin-right: 20px;
-            background-image: url(box2.jpg);
-            background-size: cover;
+            padding: 10px;
+            background-image: url(box2.png);
+            background-size: contain;
             background-repeat: no-repeat;
             padding-bottom: 30px;
+            margin-left:120px;
+            position: relative;
+            animation-name: example;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            
          }
+         @keyframes example {
+          0%   {top:0px;}
+          50%  {top:30px;}
+          100% {top:0px;}
+        }
 
         #box3{
             display: flex;
             flex-direction: column;
-            border: solid 2px #91909042;
+            border: solid 2px #ffffff7b;
             width: 20vw;
             height: 60vh;
             margin-top: 60px;
             border-radius: 25px;
-            background-color: #ffffff04;
-            backdrop-filter: blur(5px);
-            box-shadow: 0px 8px 16px 0px #414141;
+            background-color: #85858552;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 8px 16px 0px #575757;
+            overflow-y: scroll;
+            overflow-x: hidden;
             
-        }
+        } 
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background: transparent; 
+            
+          }
+           
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: #393939a5; 
+            border-radius: 5px;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #8f00fd;
+            border-radius: 5px; 
+          }
+        
+
 
         .box3Big{
             display: flex;
@@ -339,7 +392,8 @@ body{
             color: #ffffff;
             margin: 0;
             padding: 30px 0px 0px 20px;
-            font-size: 2rem;
+            font-size: 1.5rem;
+            word-wrap: break-word; /*break word in between any character tio fit in their partent*/
         }
 
         .box3Small{
@@ -351,9 +405,7 @@ body{
             width: 15vw;
             padding-top: 10px;
             margin-left: 20px;
-            
         }
-
 
 
 
