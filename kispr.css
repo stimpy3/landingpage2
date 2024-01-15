@@ -207,7 +207,7 @@ body{
         .log-sign{
             color: #ffffff;
             background-color: #171717;
-            border: solid 4px #171717;
+            border: solid 3px #171717;
             margin-right: 15px;
             height: 60px;
             width: 120px;
@@ -217,9 +217,9 @@ body{
         }
 
         @keyframes trial {
-          0% {border-color: #ffcb7e}
+          0% {border-color: #197de9}
           50% {border-color: #d740fd;}
-          100% {border-color: #ffcb7e}
+          100% {border-color: #197de9}
         }
 
         .log-sign:hover{
@@ -365,16 +365,24 @@ body{
             display: flex;
             flex-direction: column;
             border: solid 2px #ffffff7b;
-            width: 20vw;
-            height: 60vh;
+            width: 40vw;
+            height: 20vh;
             margin-top: 20px;
             border-radius: 25px;
             background-color: #ffffff;
-            box-shadow: 0px 8px 16px 0px #575757;
+            background-image: url(graph.png);
+            background-size: contain;
+            box-shadow: 2px 10px 5px #18181875;
             overflow-y: scroll;
             overflow-x: hidden;
             
         } 
+
+        #box3:hover{
+            animation-name: trial ;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
         ::-webkit-scrollbar {
             width: 10px;
           }
@@ -396,29 +404,7 @@ body{
             background: #8f00fd;
             border-radius: 5px; 
           }
-        
-
-
-        .box3Big{
-            display: flex;
-            height: fit-content;
-            color: #000000;
-            margin: 0;
-            padding: 30px 0px 0px 20px;
-            font-size: 1.5rem;
-            word-wrap: break-word; /*break word in between any character tio fit in their partent*/
-        }
-
-        .box3Small{
-            display: flex;
-            height: fit-content;
-            font-size: 1.15rem;
-            color: rgb(0, 0, 0);
-            margin-top: 10px;
-            width: 15vw;
-            padding-top: 10px;
-            margin-left: 20px;
-        }
+      
 
 
 
