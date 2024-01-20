@@ -70,14 +70,10 @@ body{
              button:hover{
                  border-color: rgb(143, 0, 253);
                  color:rgb(143, 0, 253);
-                 transform: translateY(10px);
+                 transform: translateY(5px);
                  letter-spacing: 1.5px; /*new letter spacing */
                 }
             
-             button:active{
-                 transition:0s ease; /* 0.3s duration, ease timing function */
-                 color:rgb(255, 255, 255);
-                }
              .dropdown #morework{
                  border: none;
                  transition:0s ease;
@@ -105,7 +101,7 @@ body{
 
                 .dropdown:hover{
                   transition: 0.3s ease;
-                  transform: translateY(10px);
+                  transform: translateY(5px);
                 }
                   
                   .dropbtn {
@@ -183,18 +179,15 @@ body{
         
         #medias{
             transition:0.3s ease;
-            
             color: #ffffff;
-            
-            
         }   
                 
         #medias:hover{
-            transform: translateY(10px);
+            transform: translateY(5px);
+            color: #a202b4;
         }
-
         #medias:active{
-            color: #ffffff;
+          color: #ffffff;
         }
                              
 
@@ -213,12 +206,12 @@ body{
             width: 120px;
             font-size: 1.25rem;
             box-shadow: 2px 10px 5px #18181875;
-            
+            overflow:hidden;
         }
 
         @keyframes trial {
           0% {border-color: #197de9}
-          50% {border-color: #d740fd;}
+          50% {border-color: #d740fd}
           100% {border-color: #197de9}
         }
 
@@ -231,12 +224,28 @@ body{
              
 
         }
-        .log-sign:active{
-            border-color:white;
-            color: #000000;
-            background-color: #ffffff;
+        .log-sign:active::after{
+          content: '';
+          position: absolute;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.311);
+          transform: scale(0);
+          width: 100%;
+          padding-top: 100%;
+          top: 0;
+          left: 0;
+          animation: ripple 1s linear;
+        }
+        
+        @keyframes ripple {
+          to {
+            transform: scale(5);
+            opacity: 0;
+          }
+        }
 
-       }
+
+             
 
         #log{
             margin-left: 35px;
@@ -336,7 +345,23 @@ body{
             font-weight: bolder;
             border:none;
         }
+/*
+        #box2btn:active .zaxis{
+          bottom:0;
 
+        }
+
+        .zaxis{
+          position: absolute;
+          transition-duration: 1s;
+          z-index: 5;
+          top:-100%;
+          left:300px;
+          height: 100%;
+          width: 100%;
+          background-color: #ffffff;
+        }
+*/
          #box2{
             display: flex;
            /* border: solid 2px #8f00fd;*/
@@ -369,20 +394,19 @@ body{
             height: 20vh;
             margin-top: 20px;
             border-radius: 25px;
-            background-color: #ffffff;
-            background-image: url(graph.png);
+            background-color: #0c1116;
+           
+            background-repeat: no-repeat;
             background-size: contain;
             box-shadow: 2px 10px 5px #18181875;
             overflow-y: scroll;
             overflow-x: hidden;
-            
-        } 
-
-        #box3:hover{
             animation-name: trial ;
             animation-duration: 2s;
             animation-iteration-count: infinite;
-        }
+            
+        } 
+
         ::-webkit-scrollbar {
             width: 10px;
           }
@@ -405,6 +429,9 @@ body{
             border-radius: 5px; 
           }
       
+
+          
+
 
 
 
