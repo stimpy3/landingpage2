@@ -1,7 +1,6 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
   body {
   background-color: #1f1f1f;
-  background-image: -moz-element();
   user-select: none; /*eliminates the annoying blue select text*/
   }
 
