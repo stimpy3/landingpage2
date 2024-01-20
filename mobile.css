@@ -1,0 +1,227 @@
+@media only screen and (max-width: 320px) {
+  body {
+  background-color: #1f1f1f;
+  background-image: -moz-element();
+  user-select: none; /*eliminates the annoying blue select text*/
+  }
+
+  /*to be able to set top left right etc.. you need to set opsition
+to anything except static. By default its static so you need to\
+change it to set top left right etc..*/
+
+
+.bodycontainer{
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+}
+
+.header{
+ display: flex;
+ /*position: fixed;*/
+ /*this statement kept messing with our flexbox alignment
+ the fixed position takes the .header out of the normal 
+ document flow, and the margin of the .content doesn't push
+  it down enough to clear the fixed header.*/
+ height: 10vh;
+ width: 98vw;
+ padding: 10px 10px 20px 0px;/*top right bottom left*/
+ background-color: rgba(0, 0, 0, 0);
+/* border-bottom: 2px solid rgba(69, 68, 68, 0.368); affects only bottom*/
+}
+
+#projectportal{
+ display:none;
+ width: 45vw;
+ margin-left: 1vw;
+
+}
+          
+         
+
+         .pp{
+             display:none;
+             border: none;
+             height: 40px;
+             width: 7vw;
+             font-size: 1.25rem;
+             margin:12px 4vw 0px 0px; 
+              }
+              
+
+         button{
+               display:none;
+              transition:0.3s ease; /* 0.3s duration, ease timing function */
+              border:solid;
+              color: #ffffff;
+              border-radius: 25px;
+              border: solid;
+              border-color: #00000000; /*transparent*/
+              background-color: rgba(45, 45, 45, 0);
+              /* couldn't mention height and width here because display of button is inline is by default inline*/
+              /*inline doesn't allow to change height width padding etc*/
+              /*one way to solve this problem is by writing display: inline-block; or block */
+              /*other way to do this is by mentioning the height width in a class selector we have done this below see*/
+             }
+             
+          button:hover{
+              border-color: rgb(143, 0, 253);
+              color:rgb(143, 0, 253);
+              transform: translateY(5px);
+              letter-spacing: 1.5px; /*new letter spacing */
+             }
+         
+          .dropdown #morework{
+              border: none;
+              transition:0s ease;
+              color: #ffffff;
+              transform: translateY(0px);
+              letter-spacing: normal;
+          }
+
+          #morework{
+            display:none;
+             margin-left: 1.6vw;
+             color: #ffffff;
+             width: 7vw;
+          }
+          
+          #morework:hover{
+             color: #8f00fd;
+             letter-spacing: 1.5px;
+          }
+
+
+.media{
+  display:none;
+
+.media a{
+  display:none;
+} 
+
+     
+     #medias{
+      display:none;
+     }   
+             
+     #medias:hover{
+      display:none;
+     }
+     #medias:active{
+      display:none;
+     }
+                          
+
+.login-signup{
+  display:none;
+}
+
+     .log-sign{
+      display:none;
+     }
+
+     @keyframes trial {
+       0% {border-color: #197de9}
+       50% {border-color: #d740fd}
+       100% {border-color: #197de9}
+     }
+
+     .log-sign:hover{
+      display:none;
+          
+
+     }
+     .log-sign:active::after{
+      display:none;
+     }
+     
+     @keyframes ripple {
+       to {
+         transform: scale(5);
+         opacity: 0;
+       }
+     }
+
+
+          
+
+     #log{
+      display:none;
+     }
+     
+     #sig{
+      display:none;;
+     }
+
+.content{
+  display:none;
+} 
+      #box1{
+        display:none;
+
+
+      }
+     
+      .box1Big{
+
+         /*text-shadow:
+         -1px -1px 0 #8f00fd,
+         0    -1px 0 #8f00fd,
+         1px  -1px 0 #8f00fd,
+         1px   0    0 #8f00fd,
+         1px   1px 0 #8f00fd,
+         0     1px 0 #8f00fd,
+         -1px  1px 0 #8f00fd,
+         -1px  0    0 #8f00fd;
+         */
+         /*text gradient*/
+         display:none;
+         
+         
+         
+       }
+     
+     .box1Small{
+      display:none;
+         
+     }
+
+     #box1boxes{
+      display:none;
+     }
+     #box1btn{
+      display:none;
+     }
+     #box2btn{
+      display: none;
+     }
+/*
+     #box2btn:active .zaxis{
+       bottom:0;
+
+     }
+
+     .zaxis{
+       position: absolute;
+       transition-duration: 1s;
+       z-index: 5;
+       top:-100%;
+       left:300px;
+       height: 100%;
+       width: 100%;
+       background-color: #ffffff;
+     }
+*/
+      #box2{
+        display:none;
+      }
+      @keyframes example {
+       0%   {top:0px;}
+       50%  {top:30px;}
+       100% {top:0px;}
+     }
+
+     #box3{
+      display:none;
+     } 
+}
