@@ -1,15 +1,36 @@
-/*to be able to set top left right etc.. you need to set opsition
+
+
+
+      /*to be able to set top left right etc.. you need to set opsition
 to anything except static. By default its static so you need to\
 change it to set top left right etc..*/
 
+.light{
+  background-image: url('back-light.png');
+  background-size: cover; 
+  background-color: #c3c3c3;
+  background-repeat: no-repeat;
+
+}
+
+.dark{
+  background-image: url('back.png');
+  background-size: cover; 
+  background-color: #1c1c1c;
+  background-repeat: no-repeat;
+
+}
+
+
 body{
+    background-image: url('back.png');
+    background-size: cover;
+    background-repeat: no-repeat; 
      /*background-image: linear-gradient(#101010,#2b2b2b);*/
      /*the first three lines are all needed to make the perfect background image*/
-     background-image: url('back.png');
-     background-size: cover;  /*Make the gradient cover the entire body*/ 
+    /*Make the gradient cover the entire body*/ 
      height: 97vh; /*Set height to 100% of viewport height */
      width: 95vw;
-     background-color: black;
      user-select: none; /*eliminates the annoying blue select text*/
      
     
@@ -161,18 +182,34 @@ body{
 .media{
    display: flex;
    width: fit-content;
+   padding: 30px;
+   position: absolute;
+   right: 0;
+   top:10;
    background-color: #171717;
    border-radius: 25px;
-   margin-right: 20vw;
-   justify-content: center;
-   align-items: center;
+   margin-right: 55px;
    box-shadow: 2px 10px 5px #18181875;
+   border:  1.5px solid;
+   animation-name: trial2;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
 } 
+@keyframes trial2 {
+  0% {border-color: #0479ff}
+  50% {border-color: #d740fd}
+  100% {border-color: #0479ff}
+}
+@keyframes trial {
+  0% {border-color: #197de9}
+  50% {border-color: #d740fd}
+  100% {border-color: #197de9}
+}
 
 .media a{
   display: flex;
   width: fit-content;
-  margin: 10px 10px;
+  margin: 0px 10px;
   text-decoration: none;
 } 
 
@@ -190,7 +227,7 @@ body{
           color: #ffffff;
         }
                              
-
+/*
 .login-signup{
     display: flex;
     justify-content: flex-end;
@@ -209,11 +246,7 @@ body{
             overflow:hidden;
         }
 
-        @keyframes trial {
-          0% {border-color: #197de9}
-          50% {border-color: #d740fd}
-          100% {border-color: #197de9}
-        }
+       
 
         .log-sign:hover{
              
@@ -254,7 +287,7 @@ body{
         #sig{
             margin-right:30px ;
         }
-
+*/
 .content{
     display: flex;
     height: 75vh;
@@ -284,6 +317,8 @@ body{
             display: flex;
             height: fit-content;
             color: #8f00fd;
+            position:relative;
+            left:0;
             /*text-shadow:
             -1px -1px 0 #8f00fd,
             0    -1px 0 #8f00fd,
@@ -297,7 +332,7 @@ body{
             /*text gradient*/
             margin: 0;
             padding: 30px 0px 0px 0px;
-            background: linear-gradient(to right, #ffcb7e, #6704bd);
+            background: linear-gradient(to right, #f9bb5c, #6704bd);
             -webkit-background-clip: text; /* For webkit browsers works for chrome safari modern browsers*/
             background-clip: text;
             color: transparent; 
@@ -312,8 +347,7 @@ body{
             font-size: 1.15rem;
             color: white;
             margin-top: 10px;
-           
-            padding-top: 10px;
+            padding: 10px 0px 0px 15px;
             
         }
 
@@ -387,27 +421,29 @@ body{
         }
 
         #box3{
-            display: flex;
+            display: none; /* temporary hidden*/
             flex-direction: column;
-            border: solid 2px #ffffff7b;
+            border: ridge 5px ;
             width: 40vw;
-            height: 20vh;
-            margin-top: 20px;
+            height: 15vw;
+            margin-top: 60px;
             border-radius: 25px;
             background-color: #0c1116;
-           
+            background-image: url("graph.png");
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 100%;
             box-shadow: 2px 10px 5px #18181875;
             overflow-y: scroll;
             overflow-x: hidden;
-            animation-name: trial ;
-            animation-duration: 2s;
+            border: 3px dotted;
+            animation-name: trial2;
+            animation-duration: 3s;
             animation-iteration-count: infinite;
+
             
         } 
 
-        ::-webkit-scrollbar {
+          ::-webkit-scrollbar {
             width: 10px;
           }
           
@@ -431,6 +467,9 @@ body{
       
 
           
+
+
+
 
 
 
