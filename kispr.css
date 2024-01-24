@@ -91,7 +91,7 @@ body{
              button:hover{
                  border-color: rgb(143, 0, 253);
                  color:rgb(143, 0, 253);
-                 transform: translateY(5px);
+                 transform: translateY(10px);
                  letter-spacing: 1.5px; /*new letter spacing */
                 }
             
