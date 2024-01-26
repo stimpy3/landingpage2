@@ -21,3 +21,9 @@ modeBtn.addEventListener("click", () => {
   console.log(current);
 });
 
+let calciBtn= document.querySelector("#calculator");
+calciBtn.addEventListener("click", () => {
+  window.location.href="https://stimpy3.github.io/calculator/";
+ //window.location.href to navigate to the specified URL when the button is clicked.
+});
+
