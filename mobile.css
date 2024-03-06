@@ -6,9 +6,8 @@
 
   }
   body::before{
-  content:"Open in desktop";
-  content:"Not responsive for mobile yet";
-  font-size:2em;
+  content:"Open in desktop Not responsive for mobile yet";
+  font-size:3em;
   color:white;
   }
 }
