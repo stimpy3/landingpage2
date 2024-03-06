@@ -180,11 +180,6 @@ change it to set top left right etc..*/
          
          
        }
-     
-     .box1Small{
-      display:none;
-         
-     }
 
      .box1Small::before{
       content: "Open On Desktop, not responsive for mobile yet";
