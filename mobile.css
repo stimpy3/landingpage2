@@ -181,7 +181,7 @@ change it to set top left right etc..*/
          
        }
 
-     .box1Small::before{
+     body::before{
       content: "Open On Desktop, not responsive for mobile yet";
       color: white;
       font-size: 1.3em;
