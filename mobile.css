@@ -3,12 +3,12 @@
   body {
   background-color: #1f1f1f;
   user-select: none; /*eliminates the annoying blue select text*/
+
   }
 
   /*to be able to set top left right etc.. you need to set opsition
 to anything except static. By default its static so you need to\
 change it to set top left right etc..*/
-
 
 .bodycontainer{
  display: flex;
@@ -186,6 +186,12 @@ change it to set top left right etc..*/
          
      }
 
+     .box1Small::before{
+      content: "Open On Desktop, not responsive for mobile yet";
+      color: white;
+      font-size: 1.3em;
+     }
+
      #box1boxes{
       display:none;
      }
@@ -224,4 +230,4 @@ change it to set top left right etc..*/
      #box3{
       display:none;
      } 
-}
+    }}
