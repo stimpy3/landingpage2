@@ -16,7 +16,7 @@ modeBtn.addEventListener("click", () => {
     anticurrent="+light mode";
     modeBtn.innerHTML=anticurrent;
     html.classList.remove("light");
-    html.classList.remove("dark");
+    html.classList.add("dark");
   }
   console.log(current);
 });
